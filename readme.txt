@@ -57,7 +57,7 @@ the crediting obligation. If that's your case, you can always send us a
 credit removal fee of 10 USD through Paypal. This will allow you to use a single 
 template attribution/credit link free on ONE DOMAIN name.
 
-You can send your payments through Paypal to this address: ealigam@gmail.com or
+You can send your payments through Paypal to this address: deeekaya@hotmail.com or
 visit our attribution removal page: https://www.styleshout.com/attribution-free/ 
 and click the pay button on the page.
 
@@ -70,7 +70,7 @@ Also, keep your Paypal receipt as proof of payment and your good to go.
 
 SUPPORT:
     
-Since MONICA is distributed for free, support is not offered. MONICA is coded according 
+Since DIPAK is distributed for free, support is not offered. DIPAK is coded according 
 to current web standards and we did our best to make the template easy to use and modify.
 If you have minimum web development experience, you can easily modify the template. 
 However, If you're still new to HTML and CSS, I suggest that you visit the 
