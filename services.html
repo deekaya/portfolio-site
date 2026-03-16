@@ -3,93 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipak Acharya | Hospitality Executive & Consultant</title>
+    <title>Premium Services | Dipak Acharya - Hospitality Executive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a1a;
-            --accent: #c5a059; /* Luxury Gold */
-            --text: #333;
-            --light: #f4f4f4;
+            --primary: #121212;
+            --accent: #b89356; /* Executive Gold */
+            --bg-light: #f9f9f9;
+            --text-dark: #2d2d2d;
+            --text-muted: #666;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Garamond', 'Georgia', serif; /* Elegant serif for headings */
             line-height: 1.6;
-            color: var(--text);
+            color: var(--text-dark);
             margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
+            background-color: var(--bg-light);
         }
+
+        .sans { font-family: 'Helvetica Neue', Arial, sans-serif; }
 
         header {
             background: var(--primary);
-            color: white;
-            padding: 100px 20px;
+            color: var(--white);
+            padding: 80px 20px;
             text-align: center;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
 
-        h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 300; }
-
-        .section { padding: 60px 20px; border-bottom: 1px solid #ddd; }
-        .section-title {
-            text-align: center;
-            color: var(--primary);
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--accent);
-            margin: 10px auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-left: 5px solid var(--accent);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .card h3 { margin-top: 0; color: var(--primary); }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .cta-button:hover { background: #b08d48; }
-
-        footer {
+        h1, h2, h3 { text-transform: uppercase; letter-spacing: 1.5px; }
+        
+        .category-title {
             background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
+            color: var(--accent);
+            padding: 15px 25px;
+            display: inline-block;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
         }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-top: 4px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover { transform: translateY(-5px); }
+
+        .service-card h3 { color: var(--primary); margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        
+        .evidence-box {
+            background: #f0f0f0;
+            padding: 15px 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .evidence-label {
+            font-weight: bold;
+            color: var(--accent);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ideal-clients {
+            margin-top: 15px;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Signature Niche Section */
+        .niche-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 40px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .niche-content h2 { color: var(--accent); }
+
+        /* Packaging Table */
+        .package-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            background: var(--white);
+        }
+
+        .package-table th { background: var(--primary); color: var(--accent); padding: 20px; text-align: left; }
+        .package-table td { padding: 20px; border-bottom: 1px solid #ddd; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -97,55 +119,170 @@
 
     <header>
         <div class="container">
-            <h1>Dipak Acharya</h1>
-            <p class="subtitle">DBA Candidate | CEO | Multi-Property Hospitality Executive</p>
-            <p>Driving Enterprise Value & Digital Transformation Across Global Markets</p>
-            <a href="#contact" class="cta-button">Optimize Your Venture</a>
+            <h1 class="sans">Strategic Service Portfolio</h1>
+            <p style="color: var(--accent); font-size: 1.2rem;">Bridging Visionary Concepts and Profitable Operations</p>
         </div>
     </header>
 
-    <section class="section" id="expertise">
-        <div class="container">
-            <h2 class="section-title">Hospitality Expertise at Your Service</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Operational Excellence</h3>
-                    <p>I design and implement systems that eliminate bottlenecks and enhance guest satisfaction[cite: 5, 12, 61]. From Six Sigma process optimization to full-scale digital transformation, I ensure your operations are agile and resilient[cite: 16, 86].</p>
+    <div class="container">
+        
+        <div class="category-title sans">1. C-Suite Advisory & Fractional Leadership</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Fractional CEO & Turnaround Specialist</h3>
+                <p>Providing executive leadership for hospitality groups undergoing transformation or crisis recovery. Specialized in governance restructuring and P&L oversight[cite: 11, 26, 30].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    CEO of VISA THING (5 countries)[cite: 29, 30]; MD of Hotel Swapna Bagh (8-year tenure)[cite: 47].
                 </div>
-                <div class="card">
-                    <h3>Strategic Growth</h3>
-                    <p>Leverage my experience in scaling multinational operations across the UAE and Asia[cite: 8, 30]. I provide the framework for sustainable growth through people management systems and high-value B2B alliances[cite: 17, 24, 27].</p>
+                <p class="ideal-clients">Ideal Clients: Hotel groups, family-owned hospitality businesses needing professionalization.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Pre-Opening & Project Delivery Executive</h3>
+                <p>Guiding hospitality assets from concept to grand opening, ensuring design decisions align with operational efficiency and future profitability[cite: 53, 54, 57].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Project Director for Hotel Swapna Bagh[cite: 53]; PMP Certified[cite: 85]; Led KFC franchise integration[cite: 24].
                 </div>
-                <div class="card">
-                    <h3>Revenue & Marketing</h3>
-                    <p>A data-driven approach to P&L management, RevPAR, and GOPPAR optimization[cite: 11, 15, 50]. I focus on maximizing both top and bottom-line growth through aggressive sales tactics and record-breaking revenue strategies[cite: 32, 62].</p>
+                <p class="ideal-clients">Ideal Clients: Hotel developers, real estate firms, branded hotel franchisees.</p>
+            </div>
+        </div>
+
+        <div class="category-title sans">2. Sustainable Infrastructure & ESG Strategy</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Sustainable Hospitality & EV Consultant</h3>
+                <p>Guidance on integrating EV charging infrastructure with premium hospitality services, including site selection and feasibility studies[cite: 16, 23].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Architected Nepal's nationwide e-Stop network[cite: 23]; Merged DC fast-charging with luxury motels and KFC outlets[cite: 23, 24].
                 </div>
-                <div class="card">
-                    <h3>Guerrilla Market Entry</h3>
-                    <p>Navigate complex markets with a strategic roadmap[cite: 14, 17]. I specialize in building market presence on limited budgets by identifying high-yield demographics and executing design-led entry strategies[cite: 43, 89].</p>
+                <p class="ideal-clients">Ideal Clients: Government tourism departments, highway authorities, infrastructure funds.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>ESG & Green Hospitality Strategy</h3>
+                <p>Developing credible sustainability roadmaps that connect environmental responsibility with bottom-line performance[cite: 16, 23, 71].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    ESG listed as core competency [cite: 16]; e-Stop project reduced regional carbon footprints[cite: 23].
+                </div>
+                <p class="ideal-clients">Ideal Clients: Luxury resorts, international hotel chains, eco-lodge developers.</p>
+            </div>
+        </div>
+
+        <div class="category-title sans">3. Revenue & Commercial Optimization</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Revenue Management & Profit Audit</h3>
+                <p>Deep-dive diagnostics of pricing strategy and inventory management to increase RevPAR and GOPPAR[cite: 11, 15, 50].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Exceeded RevPAR goals at Hotel Swapna Bagh[cite: 50]; Hotel Demand Management certification (ESSEC)[cite: 87].
+                </div>
+                <p class="ideal-clients">Ideal Clients: Independent hotels, properties overly dependent on OTAs.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Commercial Alliance Architect</h3>
+                <p>Designing high-value partnerships between hospitality assets and global brands or government entities[cite: 17, 24, 65].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    KFC (Yum! Brands) exclusive partnership[cite: 24]; BB Airways international agency partnerships[cite: 65].
+                </div>
+                <p class="ideal-clients">Ideal Clients: Hotels seeking corporate accounts, restaurant groups, tourism boards.</p>
+            </div>
+        </div>
+
+        <div class="niche-section">
+            <div class="container niche-content">
+                <h2>Signature Niche: The Infrastructure-Hospitality Hybrid</h2>
+                <p>Leveraging my unique experience with the e-Stop network to specialize in highway rest stops, EV-integrated hospitality, and transit-oriented assets[cite: 23].</p>
+            </div>
+        </div>
+
+        <div class="category-title sans">4. People, Culture & Executive Development</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Hospitality Leadership Mentor</h3>
+                <p>One-on-one coaching for GMs and emerging leaders to navigate complex turnarounds and cross-cultural management[cite: 12, 33, 38].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Mentored 20+ senior professionals at VISA THING[cite: 33]; Lecturer in Service Quality Management[cite: 37].
+                </div>
+                <p class="ideal-clients">Ideal Clients: New GMs, family business successors, corporate leadership programs.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Service Culture Facilitator</h3>
+                <p>Implementing systematic changes to reduce turnover and increase NPS through team engagement and process redesign[cite: 27, 34, 45].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Designed service recovery training at Bellagio Colombo[cite: 45]; Six Sigma Green Belt[cite: 86].
+                </div>
+                <p class="ideal-clients">Ideal Clients: High-turnover properties, brands needing culture consistency.</p>
+            </div>
+        </div>
+
+        <div class="category-title sans">5. Digital & Market Expansion</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Digital Transformation Advisor</h3>
+                <p>Guiding technology selection (PMS, CRM, RMS) to improve efficiency and guest experience[cite: 16, 51].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Cloud migration of Sales & Event Management at Hotel Swapna Bagh[cite: 51]; Agile Project Management certified[cite: 85].
+                </div>
+            </div>
+
+            <div class="service-card">
+                <h3>South Asia Market Entry Strategist</h3>
+                <p>Providing on-the-ground intelligence and regulatory navigation for international brands entering South Asia[cite: 14, 17, 30].</p>
+                <div class="evidence-box">
+                    <span class="evidence-label">Track Record:</span>
+                    Spearheaded growth for VISA THING across 5 countries[cite: 30, 31]; Experience in Nepal, UAE, India, Sri Lanka.
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="section" style="background: var(--light);">
-        <div class="container">
-            <h2 class="section-title">Why Partner With Me?</h2>
-            <p style="text-align: center; max-width: 800px; margin: auto;">
-                With over 15 years of experience orchestrating complex business transformations and currently pursuing a DBA in Executive Leadership, I merge luxury hospitality standards with rigorous academic frameworks to solve real-world operational challenges[cite: 8, 9].
-            </p>
-        </div>
-    </section>
+        <h2 class="section-title sans" style="text-align: center; margin-top: 80px;">Tailored Service Packages</h2>
+        <table class="package-table">
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Target Clients</th>
+                    <th>Services Bundled</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>The Turnaround Package</strong></td>
+                    <td>Distressed Hotels</td>
+                    <td>Fractional CEO + Revenue Audit + Culture Transformation</td>
+                </tr>
+                <tr>
+                    <td><strong>The Green Highway Package</strong></td>
+                    <td>Infrastructure Firms</td>
+                    <td>Sustainable Hospitality + EV Infrastructure + B2B Partnerships</td>
+                </tr>
+                <tr>
+                    <td><strong>The Market Entry Package</strong></td>
+                    <td>International Brands</td>
+                    <td>Feasibility Study + Partnership Architecture + Digital Strategy</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>Ready to Elevate Your Brand?</h2>
-            <p>Kathmandu, Nepal | Global Consulting Available</p>
-            <p>Email: deeekaya@hotmail.com | Phone: +977 (985) 112-3614</p>
-            <p><a href="https://linkedin.com/in/dipak-acharya1/" style="color: var(--accent);">LinkedIn Profile</a></p>
-            <hr style="border: 0; border-top: 1px solid #444; margin: 20px 0;">
-            <p>&copy; 2026 Dipak Acharya. All Rights Reserved.</p>
+        <div style="text-align: center; margin: 80px 0;">
+            <p class="sans" style="font-size: 1.5rem; color: var(--primary);">Ready to build future-ready hospitality assets?</p>
+            <a href="mailto:deeekaya@hotmail.com" style="background: var(--accent); color: white; padding: 15px 40px; text-decoration: none; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">Consult with Dipak</a>
         </div>
+
+    </div>
+
+    <footer style="background: var(--primary); color: #888; text-align: center; padding: 40px;">
+        <p>&copy; 2026 Dipak Acharya | DBA Candidate | CEO & Hospitality Executive</p>
     </footer>
 
 </body>
