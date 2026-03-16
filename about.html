@@ -1,78 +1,82 @@
-:root {
-    --primary: #1a1a1a;
-    --accent: #d4af37; /* Gold */
-    --text: #f4f4f4;
-    --gray: #2d2d2d;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak Acharya | Executive Leadership & Luxury Hospitality</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DA</div>
+            <ul>
+                <li><a href="#about">Profile</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Academic</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Dipak Acharya</h1>
+            <p class="tagline">CEO & Multi-Property Hospitality Executive</p>
+            <p class="credentials">DBA Candidate | MBA | PGC</p>
+            <div class="cta-buttons">
+                <a href="mailto:deeekaya@hotmail.com" class="btn primary">Contact Me</a>
+                <a href="https://linkedin.com/in/dipak-acharya1/" target="_blank" class="btn secondary">LinkedIn</a>
+            </div>
+        </div>
+    </header>
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--primary);
-    color: var(--text);
-    margin: 0;
-    line-height: 1.6;
-}
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Executive Summary</h2>
+            <p>Visionary C-Suite Executive with 15+ years experience orchestrating complex business transformations and scaling multinational operations across the UAE and Asia. Currently pioneering sustainable infrastructure and luxury hospitality synergies.</p>
+        </div>
+    </section>
 
-header {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    <section id="expertise" class="section gray">
+        <div class="container">
+            <h2>Core Executive Competencies</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Executive Leadership</h3>
+                    <p>P&L Management, M&A, and Global Market Expansion.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hospitality Operations</h3>
+                    <p>RevPAR/GOPPAR Optimization & Luxury Asset Management.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>ESG & Digital Strategy</h3>
+                    <p>EV Infrastructure and Sustainable Digital Transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: rgba(26, 26, 26, 0.9);
-    z-index: 1000;
-}
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Leadership Milestones</h2>
+            <div class="timeline-item">
+                <h3>General Manager - Business Head | thee GO</h3>
+                <span class="date">06/2023 – Present</span>
+                <p>Architected Nepal’s nationwide "e-Stop" EV charging network, merging ESG goals with premium hospitality.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>CEO | VISA THING</h3>
+                <span class="date">11/2023 – 02/2025</span>
+                <p>Led digital modernization across 5 international hubs, optimizing B2B acquisition and record revenue growth.</p>
+            </div>
+        </div>
+    </section>
 
-.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
-
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: white; transition: 0.3s; }
-nav ul li a:hover { color: var(--accent); }
-
-.hero-content h1 { font-size: 4rem; margin: 0; letter-spacing: 2px; }
-.tagline { font-size: 1.5rem; color: var(--accent); }
-
-.btn {
-    padding: 12px 30px;
-    text-decoration: none;
-    margin: 10px;
-    display: inline-block;
-    border-radius: 5px;
-    font-weight: bold;
-}
-.primary { background: var(--accent); color: var(--primary); }
-.secondary { border: 2px solid var(--accent); color: var(--accent); }
-
-.section { padding: 80px 10%; }
-.gray { background: var(--gray); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-
-.card {
-    padding: 30px;
-    background: var(--primary);
-    border-bottom: 4px solid var(--accent);
-    text-align: center;
-}
-
-.card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
-
-.timeline-item {
-    border-left: 2px solid var(--accent);
-    padding-left: 20px;
-    margin-bottom: 40px;
-}
-
-footer { text-align: center; padding: 40px; border-top: 1px solid var(--gray); }
+    <footer>
+        <p>&copy; 2026 Dipak Acharya. Kathmandu, Nepal.</p>
+    </footer>
+</body>
+</html>
