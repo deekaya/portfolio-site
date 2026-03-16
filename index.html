@@ -3,105 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Introduction | Dipak Acharya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --executive-navy: #0a192f;
-            --accent-gold: #c5a059;
-            --text-light: #e6f1ff;
-            --text-muted: #8892b0;
+            --bg: #0f1113;
+            --card: #1a1d21;
+            --accent: #c5a059; /* Executive Gold */
+            --text: #e0e0e0;
+            --muted: #a0a0a0;
             --white: #ffffff;
         }
 
-        .intro-container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: var(--executive-navy);
-            padding: 60px;
-            border-radius: 4px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            border-left: 5px solid var(--accent-gold);
-            font-family: 'Inter', -apple-system, sans-serif;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.7;
         }
 
-        .intro-eyebrow {
-            color: var(--accent-gold);
+        .intro-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .label {
+            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 0.85rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            display: block;
         }
 
-        .intro-headline {
+        h1 {
+            font-size: 2.5rem;
             color: var(--white);
-            font-size: 2.2rem;
-            line-height: 1.2;
-            margin-bottom: 30px;
+            margin: 10px 0;
             font-weight: 300;
         }
 
-        .intro-headline span {
-            font-weight: 700;
-            color: var(--accent-gold);
+        .philosophy-quote {
+            max-width: 800px;
+            margin: 40px auto;
+            font-size: 1.2rem;
+            color: var(--muted);
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 30px;
+            text-align: left;
         }
 
-        .intro-body {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
+        /* Split Section Layout */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
         }
 
-        .intro-body strong {
-            color: var(--text-light);
-            font-weight: 500;
+        .profile-block {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid #2a2d32;
+            position: relative;
+            transition: 0.3s;
         }
 
-        .credentials-bar {
+        .profile-block:hover {
+            border-color: var(--accent);
+        }
+
+        .block-header {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
+            align-items: center;
+            margin-bottom: 25px;
         }
 
-        .credential-item {
-            color: var(--text-light);
-            font-size: 0.85rem;
+        .block-header i {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .block-header h2 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Skills/Values Tags */
+        .tag-container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
             background: rgba(197, 160, 89, 0.1);
-            padding: 8px 15px;
+            color: var(--accent);
+            padding: 5px 12px;
             border-radius: 20px;
             border: 1px solid rgba(197, 160, 89, 0.3);
         }
 
-        @media (max-width: 768px) {
-            .intro-container { padding: 30px; }
-            .intro-headline { font-size: 1.7rem; }
+        /* Education Bar */
+        .education-strip {
+            grid-column: span 2;
+            background: linear-gradient(90deg, #1a1d21 0%, #0f1113 100%);
+            padding: 30px;
+            border-top: 1px solid var(--accent);
+            text-align: center;
+        }
+
+        .edu-item {
+            display: inline-block;
+            margin: 10px 30px;
+            font-size: 0.95rem;
+        }
+
+        .edu-item strong { color: var(--accent); }
+
+        /* Final CTA */
+        .testimonial-nudge {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: #14171a;
+            border-radius: 8px;
+        }
+
+        .cta-text {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        @media (max-width: 850px) {
+            .profile-grid { grid-template-columns: 1fr; }
+            .education-strip { grid-column: span 1; }
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="intro-container">
-    <span class="intro-eyebrow">Executive Profile</span>
-    <h1 class="intro-headline">Bridging the gap between <span>Visionary Strategy</span> and <span>Human-Centered Leadership.</span></h1>
-    
-    <div class="intro-body">
-        <p>
-            I believe that the highest form of leadership is the synthesis of rigorous academic framework and genuine human connection. 
-            On a personal level, I am guided by <strong>kindness, humility, and unwavering loyalty</strong>—values that I translate professionally into a "lead-by-example" philosophy. 
-        </p>
-        <p>
-            With 15 years of C-Suite experience, I specialize in <strong>maximizing P&L efficiency</strong> on disciplined budgets and making timely, data-backed decisions. I pride myself on <strong>placing the right people in the right roles</strong>, ensuring that every team I lead remains aligned, motivated, and performing at its absolute peak.
-        </p>
+    <header>
+        <span class="label">Executive Profile</span>
+        <h1>Dipak Acharya</h1>
+        <div class="philosophy-quote">
+            "Telling someone about myself is a journey between two worlds: the personal values that ground me and the professional rigor that drives me." 
+        </div>
+    </header>
+
+    <div class="profile-grid">
+        <div class="profile-block">
+            <div class="block-header">
+                <i class="fas fa-heart"></i>
+                <h2>Personal Foundation</h2>
+            </div>
+            <p>I am someone who deeply values <strong>kindness, humility, loyalty, and positivity</strong>[cite: 1, 3, 12]. I believe in building and maintaining healthy relationships through genuine dedication and respect for every individual[cite: 1, 12].</p>
+            <div class="tag-container">
+                <span class="tag">Integrity</span>
+                <span class="tag">Humility</span>
+                <span class="tag">Relationship Building</span>
+                <span class="tag">Authenticity</span>
+            </div>
+        </div>
+
+        <div class="profile-block">
+            <div class="block-header">
+                <i class="fas fa-briefcase"></i>
+                <h2>Professional Mastery</h2>
+            </div>
+            <p>As a hands-on leader in the hospitality industry, I lead by example[cite: 1, 5]. I specialize in maximizing profits and delivering high-efficiency projects even on limited budgets[cite: 1, 52]. My focus is on making timely, data-driven decisions while placing the right talent in the right roles[cite: 1, 16].</p>
+            <div class="tag-container">
+                <span class="tag">P&L Management</span>
+                <span class="tag">Change Management</span>
+                <span class="tag">Operational Efficiency</span>
+                <span class="tag">Strategic Planning</span>
+            </div>
+        </div>
+
+        <div class="education-strip">
+            <div class="edu-item"><strong>MBA:</strong> HR & Marketing [cite: 1, 72]</div>
+            <div class="edu-item"><strong>PGC:</strong> Hospitality & Int'l Business [cite: 1, 75]</div>
+            <div class="edu-item"><strong>Current:</strong> DBA in Executive Leadership (Switzerland) [cite: 1, 69, 70]</div>
+        </div>
     </div>
 
-    <div class="credentials-bar">
-        <div class="credential-item">DBA Candidate | Executive Leadership</div>
-        <div class="credential-item">MBA | HRM & Marketing</div>
-        <div class="credential-item">Postgraduate | International Business</div>
-        <div class="credential-item">Six Sigma Green Belt</div>
+    <div class="testimonial-nudge">
+        <p class="cta-text">A self-description can only capture a fragment of a professional journey. To truly understand my impact, I invite you to hear from the colleagues and teams I've had the privilege to lead. </p>
+        <a href="https://linkedin.com/in/dipak-acharya1/" class="btn-outline">View Recommendations</a>
     </div>
 </div>
 
