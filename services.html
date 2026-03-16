@@ -3,238 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Services | Dipak Acharya - Executive Hospitality Consultant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Premium Services | Dipak Acharya - Hospitality Executive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #c5a059;
-            --dark: #121212;
-            --off-white: #f8f9fa;
-            --slate: #2c3e50;
+            --primary-dark: #121212;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #e0bc75;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #fafafa;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: 'Playfair Display', serif; /* Elegant for headers */
-            font-family: 'Inter', sans-serif; /* Clean for body */
-            margin: 0;
-            color: var(--slate);
-            line-height: 1.6;
-            background-color: var(--off-white);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            line-height: 1.7;
+            background-color: var(--white);
         }
 
-        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
-
-        /* Hero Section */
-        .services-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80');
+        /* --- Header Section --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1920'); /* Luxury Hotel Background */
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 100px 0;
+            color: var(--white);
+            padding: 120px 20px;
             text-align: center;
         }
 
-        .hero-title { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-        .hero-tagline { font-size: 1.2rem; font-style: italic; color: var(--gold); max-width: 800px; margin: auto; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
 
-        /* Category Styling */
-        .category-section { padding: 80px 0; border-bottom: 1px solid #ddd; }
-        .category-header { margin-bottom: 50px; text-align: center; }
-        .category-header h2 { font-size: 2.2rem; color: var(--dark); margin-bottom: 10px; }
-        .category-header .line { width: 60px; height: 3px; background: var(--gold); margin: auto; }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
 
-        /* Service Cards */
+        /* --- Statement Section --- */
+        .mission-statement {
+            background: var(--bg-light);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .mission-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            line-height: 1.8;
+        }
+
+        /* --- Services Grid --- */
+        .services-container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-dark);
+        }
+
+        .section-header .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--accent-gold);
+            margin: 20px auto;
+        }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
         }
 
         .service-card {
-            background: white;
+            background: var(--white);
             padding: 40px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            border-top: 4px solid var(--gold);
         }
 
-        .service-card:hover { transform: translateY(-5px); }
-        .service-card h3 { color: var(--dark); margin-top: 0; font-size: 1.5rem; }
-        .service-card p { font-size: 0.95rem; color: #555; margin-bottom: 20px; }
-        
-        .evidence-box {
+        .service-number {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .service-description {
+            margin-bottom: 25px;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .edge-box {
             background: #fdfaf3;
-            padding: 15px;
-            border-radius: 4px;
-            font-size: 0.85rem;
+            padding: 20px;
+            border-left: 3px solid var(--accent-gold);
+            margin-top: auto;
         }
-        .evidence-box strong { color: var(--gold); text-transform: uppercase; }
 
-        /* Signature Niche Section */
-        .niche-banner {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0;
-            margin: 40px 0;
+        .edge-box strong {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+        }
+
+        .edge-box p {
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        /* --- Contact/CTA Footer --- */
+        .cta-footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 20px;
             text-align: center;
         }
-        .niche-banner h2 { color: var(--gold); margin-bottom: 20px; }
 
-        /* Package Table */
-        .package-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 40px;
-            background: white;
+        .cta-footer h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
         }
-        .package-table th, .package-table td {
-            padding: 20px;
-            border: 1px solid #eee;
-            text-align: left;
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--white);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: 0.3s;
+            margin-top: 20px;
         }
-        .package-table th { background: var(--gold); color: white; }
 
-        footer { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
+        .btn:hover {
+            background: var(--accent-gold-hover);
+        }
 
+        /* --- Responsive --- */
         @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
             .services-grid { grid-template-columns: 1fr; }
-            .hero-title { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <section class="services-hero">
-        <div class="container">
-            <h1 class="hero-title">Global Hospitality & Infrastructure Solutions</h1>
-            <p class="hero-tagline">"I bridge the gap between visionary concepts and profitable operations—leveraging 15 years of C-Suite experience to build future-ready assets."</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevating Hospitality Standards</h1>
+            <p>Bespoke Strategic Solutions for Global Hospitality Investors & Developers</p>
+        </div>
+    </header>
+
+    <section class="mission-statement">
+        <div class="mission-inner">
+            "I help hospitality investors and developers build future-ready assets that combine luxury standards with sustainable infrastructure. With 15 years of C-suite experience across Asia and rigorous DBA-level strategic training, I bridge the gap between visionary concepts and profitable operations."
         </div>
     </section>
 
-    <section class="category-section">
-        <div class="container">
-            <div class="category-header">
-                <h2>C-Suite Advisory & Fractional Leadership</h2>
-                <div class="line"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>1. Fractional CEO / Turnaround Specialist</h3>
-                    <p>Strategic direction, governance restructuring, and P&L oversight for companies in transformation or crisis recovery.</p>
-                    <div class="evidence-box">
-                        <strong>Proven Track Record:</strong> CEO of VISA THING (5 countries), MD of Hotel Swapna Bagh, Expert Crisis Management. [cite: 29, 30, 35, 47]
-                    </div>
-                </div>
-                <div class="service-card">
-                    <h3>2. Pre-Opening & Project Delivery Executive</h3>
-                    <p>Guiding hospitality assets from concept to grand opening with an operator's intuition to ensure future profitability.</p>
-                    <div class="evidence-box">
-                        <strong>Proven Track Record:</strong> Project Director for Hotel Swapna Bagh; PMP Certified; Led KFC integration at e-Stop. [cite: 24, 53, 56, 85]
-                    </div>
-                </div>
-            </div>
+    <main class="services-container">
+        <div class="section-header">
+            <h2>10 Premium Services</h2>
+            <div class="divider"></div>
         </div>
-    </section>
 
-    <section class="category-section" style="background: #fff;">
-        <div class="container">
-            <div class="category-header">
-                <h2>Sustainable Infrastructure & ESG Strategy</h2>
-                <div class="line"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>3. Sustainable Hospitality & EV Infrastructure</h3>
-                    <p>End-to-end guidance on integrating EV charging with premium hospitality and global F&B brands.</p>
-                    <div class="evidence-box">
-                        <strong>Proven Track Record:</strong> Architected Nepal’s nationwide e-Stop EV network; Merged DC fast-charging with luxury motels. 
-                    </div>
+        <div class="services-grid">
+            
+            <article class="service-card">
+                <span class="service-number">Service 01</span>
+                <h3>Fractional Chief Executive Officer (CEO)</h3>
+                <p class="service-description">Strategic direction, governance restructuring, and full P&L oversight for groups needing seasoned leadership during periods of transformation, expansion, or turnaround.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Proven track record as CEO of a multinational firm (VISA THING) and MD of Hotel Swapna Bagh.</p>
                 </div>
-                <div class="service-card">
-                    <h3>4. ESG & Green Hospitality Strategy</h3>
-                    <p>Developing credible sustainability roadmaps that connect environmental responsibility with bottom-line performance.</p>
-                    <div class="evidence-box">
-                        <strong>Proven Track Record:</strong> Focused on transformative leadership and organizational resilience via DBA research. [cite: 69, 71]
-                    </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-number">Service 02</span>
+                <h3>Pre-Opening & Project Delivery Director</h3>
+                <p class="service-description">Guiding assets from concept to grand opening, ensuring design, vendor contracts, and construction align with future operational efficiency.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Directed pre-opening for Hotel Swapna Bagh; PMP and Agile Project Management certified.</p>
                 </div>
-            </div>
-        </div>
-    </section>
+            </article>
 
-    <div class="niche-banner">
-        <div class="container">
-            <h2>Your Signature Niche: The Infrastructure-Hospitality Hybrid</h2>
-            <p>I am the go-to expert for highway rest stops, EV-integrated hospitality, and transit-oriented assets that demand global standards and local expertise. </p>
-        </div>
-    </div>
-
-    <section class="category-section">
-        <div class="container">
-            <div class="category-header">
-                <h2>Revenue & Commercial Optimization</h2>
-                <div class="line"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>5. Revenue Management & Profit Audit</h3>
-                    <p>Diagnostics of pricing strategy and channel mix to identify leakage and tap into new revenue opportunities.</p>
-                    <div class="evidence-box">
-                        <strong>Proven Track Record:</strong> ESSEC Certified in Hotel Demand Management; Exceeded RevPAR goals at Swapna Bagh. [cite: 50, 87]
-                    </div>
+            <article class="service-card">
+                <span class="service-number">Service 03</span>
+                <h3>Sustainable Hospitality & EV Infrastructure</h3>
+                <p class="service-description">Advising on integrating EV charging infrastructure with premium hospitality, including site selection and global F&B partnership frameworks.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Architected Nepal’s first nationwide e-Stop EV highway network, merging luxury hospitality with ESG innovation.</p>
                 </div>
-                <div class="service-card">
-                    <h3>6. B2B Partnership & Commercial Architect</h3>
-                    <p>Negotiating high-value alliances between hospitality assets and global brands or government entities.</p>
-                    <div class="evidence-box">
-                        <strong>Proven Track Record:</strong> Exclusive KFC partnership; VIP acquisition at Bellagio Colombo; BB Airways B2B growth. [cite: 24, 43, 65]
-                    </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-number">Service 04</span>
+                <h3>Revenue Management & Profit Optimization</h3>
+                <p class="service-description">Deep-dive diagnostics of pricing strategy and inventory management to identify revenue leakage and increase RevPAR/GOPPAR.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Consistently exceeded RevPAR goals; Certified in Hotel Demand Management (ESSEC Business School).</p>
                 </div>
-            </div>
-        </div>
-    </section>
+            </article>
 
-    <section class="category-section" style="background: white;">
-        <div class="container">
-            <div class="category-header">
-                <h2>Strategic Service Packages</h2>
-                <p>Bundled solutions for specific business lifecycle stages.</p>
-            </div>
-            <table class="package-table">
-                <thead>
-                    <tr>
-                        <th>Package</th>
-                        <th>Target Client</th>
-                        <th>Core Services</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>The Green Highway</strong></td>
-                        <td>Infrastructure Firms & Gov</td>
-                        <td>EV Infrastructure + Sustainable Hospitality + B2B Partnerships</td>
-                    </tr>
-                    <tr>
-                        <td><strong>The Turnaround</strong></td>
-                        <td>Distressed Hotels</td>
-                        <td>Fractional CEO + Revenue Audit + Culture Transformation</td>
-                    </tr>
-                    <tr>
-                        <td><strong>The Pre-Opening</strong></td>
-                        <td>Developers</td>
-                        <td>Project Management + Systems Setup + Team Development</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+            <article class="service-card">
+                <span class="service-number">Service 05</span>
+                <h3>B2B Partnership & Commercial Alliances</h3>
+                <p class="service-description">Negotiating high-value partnerships between hospitality assets and global brands or government entities to ensure measurable ROI.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Orchestrated exclusive Yum! Brands (KFC) partnerships; built alliances at BB Airways and Bellagio Colombo.</p>
+                </div>
+            </article>
 
-    <footer>
+            <article class="service-card">
+                <span class="service-number">Service 06</span>
+                <h3>Leadership Mentor & Executive Coach</h3>
+                <p class="service-description">One-on-one coaching for GMs and department heads, navigating culture building, owner relations, and personal effectiveness.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>DBA Candidate in Executive Leadership; Lecturer in Service Quality Management.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-number">Service 07</span>
+                <h3>Service Excellence & Culture Transformation</h3>
+                <p class="service-description">Diagnosing workplace culture and implementing systematic change through process redesign and team engagement strategies.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Six Sigma Green Belt; Designed service recovery training at Bellagio Colombo.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-number">Service 08</span>
+                <h3>Technology & Digital Transformation Advisor</h3>
+                <p class="service-description">Guiding hotels through the selection and integration of PMS, CRM, and cloud-based systems to improve the guest experience.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Championed migration to cloud-based Advanced Sales & Event Management systems at multi-property levels.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-number">Service 09</span>
+                <h3>Market Entry & Feasibility (South Asia Focus)</h3>
+                <p class="service-description">Providing on-the-ground intelligence and regulatory navigation for brands entering Nepal, India, Bangladesh, and Sri Lanka.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Spearheaded multinational expansion across five primary international hubs including Dubai and Vietnam.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-number">Service 10</span>
+                <h3>Interim General Manager – Turnaround</h3>
+                <p class="service-description">Stabilizing underperforming properties over a 3-12 month period to fix operational flows and restore EBITDA growth.</p>
+                <div class="edge-box">
+                    <strong>Your Edge</strong>
+                    <p>Expert in zero-based budgeting and crisis navigation; delivered consistent year-over-year revenue expansion.</p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="cta-footer">
         <div class="container">
-            <h2>Elevate Your Operations Today</h2>
-            <p>Based in Kathmandu | Consulting Globally</p>
-            <p>Email: deeekaya@hotmail.com | LinkedIn: linkedin.com/in/dipak-acharya1/</p>
-            <br>
-            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Dipak Acharya. DBA Candidate - Swiss International Management Academy. [cite: 70]</p>
+            <h2>Bridge the gap between vision and profitability.</h2>
+            <p>Available for Executive Consulting & Strategic Partnerships Worldwide.</p>
+            <a href="mailto:deeekaya@hotmail.com" class="btn">Inquire About My Services</a>
         </div>
     </footer>
 
