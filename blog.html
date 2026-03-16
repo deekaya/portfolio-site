@@ -3,152 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Executive Reflection | Dipak Acharya</title>
+    <title>The Executive Ledger | Dipak Acharya</title>
     <style>
         :root {
-            --bg: #fdfdfd;
-            --accent: #1a1a1a;
-            --gold: #c5a059;
-            --text: #333;
-            --serif: 'Playfair Display', serif;
-            --sans: 'Inter', sans-serif;
+            --bg: #0f1113;
+            --card-bg: #1a1d21;
+            --accent: #c5a059;
+            --text: #e0e0e0;
+            --muted: #a0a0a0;
         }
-
         body {
-            background-color: var(--bg);
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
             color: var(--text);
-            font-family: var(--sans);
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            line-height: 1.8;
+            padding: 40px 20px;
         }
-
-        .journal-header {
-            text-align: center;
-            padding: 80px 20px;
-            border-bottom: 2px solid var(--accent);
-            background: #fff;
-        }
-
-        .journal-title {
-            font-family: var(--serif);
-            font-size: 3.5rem;
+        .container { max-width: 900px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 60px; border-bottom: 1px solid var(--accent); padding-bottom: 30px; }
+        h1 { text-transform: uppercase; letter-spacing: 4px; color: #fff; margin-bottom: 10px; }
+        .journal-meta { font-style: italic; color: var(--accent); }
+        
+        .category-title {
+            color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 0;
-        }
-
-        .journal-meta {
-            text-transform: uppercase;
-            letter-spacing: 2px;
             font-size: 0.9rem;
-            color: var(--gold);
-            margin-top: 10px;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-left: 3px solid var(--accent);
+            padding-left: 15px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
+        .article-card {
+            background: var(--card-bg);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+            border: 1px solid #2a2d32;
+            transition: 0.3s;
         }
-
-        .article-section {
-            margin-bottom: 80px;
-        }
-
-        .section-tag {
-            font-weight: bold;
-            color: var(--gold);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            font-family: var(--serif);
-            font-size: 2.2rem;
-            margin: 10px 0 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .article-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-
-        .entry {
-            border-left: 3px solid var(--gold);
-            padding-left: 25px;
-        }
-
-        .entry h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.4rem;
-        }
-
-        .entry p {
-            color: #666;
-            font-size: 1.05rem;
-        }
-
-        .entry a {
+        .article-card:hover { border-color: var(--accent); transform: translateX(5px); }
+        .article-card h3 { margin: 0 0 10px 0; color: #fff; }
+        .article-card p { font-size: 0.95rem; color: var(--muted); margin-bottom: 15px; }
+        
+        .read-more {
             color: var(--accent);
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            border-bottom: 1px solid var(--gold);
         }
-
-        footer {
-            background: var(--accent);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 100px;
-        }
-
-        @media (max-width: 768px) {
-            .journal-title { font-size: 2rem; }
-        }
+        .read-more:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <section class="section" id="journal">
-    <div class="container">
-        <h2 class="section-title">Strategic Journal & Insights</h2>
-        <div class="grid">
-            <div class="card">
-                <span class="meta-info">Leadership</span>
-                <h3>Building Resilience</h3>
-                <p>An exploration of intentional discomfort and its role in forging high-performance teams.</p>
-                <a href="https://www.linkedin.com/pulse/building-resilience-through-intentional-discomfort-dipak-acharya-bhz9c/" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Read Full Article</a>
-            </div>
+<div class="container">
+    <header>
+        <h1>The Executive Ledger</h1>
+        <p class="journal-meta">Curated Insights by Dipak Acharya, DBA Candidate & CEO</p>
+    </header>
 
-            <div class="card">
-                <span class="meta-info">ESG & Innovation</span>
-                <h3>The EV Revolution</h3>
-                <p>Analyzing the synergy between sustainable infrastructure and global F&B partnerships in Nepal.</p>
-                <a href="https://www.linkedin.com/pulse/thee-go-e-stop-partners-kfc-launch-nepals-first-eco-friendly-d5wrc/" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Read Full Article</a>
-            </div>
-
-            <div class="card">
-                <span class="meta-info">Socio-Economic</span>
-                <h3>The National Dilemma</h3>
-                <p>Discussing the impact of youth migration on the future of Nepal's business landscape.</p>
-                <a href="https://thehimalayantimes.com/opinion/the-disappearing-youth-of-nepal-a-national-dilemma" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Read Full Article</a>
-            </div>
-        </div>
+    <div class="category-title">Leadership & Strategic Growth</div>
+    
+    <div class="article-card">
+        <h3>Your Value is Determined by Your Environment</h3>
+        <p>A reflection on why being exceptional in the wrong place can stifle growth and how to find the right ecosystem for your talents.</p>
+        <a href="https://www.linkedin.com/pulse/your-value-determined-environment-being-exceptional-wrong-zyiyc/" class="read-more">Read Full Article →</a>
     </div>
-</section>
 
-    <footer>
-        <p>&copy; 2026 Dipak Acharya | Kathmandu, Nepal</p>
-        <p>DBA Candidate in Executive Leadership</p>
-    </footer>
+    <div class="article-card">
+        <h3>Building Resilience Through Intentional Discomfort</h3>
+        <p>Exploring the necessity of stepping out of comfort zones to forge high-performance leadership traits.</p>
+        <a href="https://www.linkedin.com/pulse/building-resilience-through-intentional-discomfort-dipak-acharya-bhz9c/" class="read-more">Read Full Article →</a>
+    </div>
+
+    <div class="article-card">
+        <h3>Two Parallel Paths: Politics & Business</h3>
+        <p>Analyzing how these two spheres serve the same public and the importance of strategic alignment between them.</p>
+        <a href="https://www.linkedin.com/pulse/two-parallel-paths-politics-business-serving-same-public-ngkvc/" class="read-more">Read Full Article →</a>
+    </div>
+
+    <div class="category-title">Sustainable Infrastructure & Hospitality</div>
+
+    <div class="article-card">
+        <h3>The Proactive Pivot in Hospitality</h3>
+        <p>How visionary leaders prevent crisis by pivoting operations toward sustainability and digital modernization.</p>
+        <a href="https://www.linkedin.com/pulse/proactive-pivot-how-visionary-hospitality-leaders-prevent-7eqic/" class="read-more">Read Full Article →</a>
+    </div>
+
+    <div class="article-card">
+        <h3>Nepal’s Highway Paradox: EV Revolution</h3>
+        <p>A critical look at the collision between green energy ambitions and the reality of national road infrastructure.</p>
+        <a href="https://www.linkedin.com/pulse/nepals-highway-paradox-ev-revolution-driving-road-ruin-kh2qe/" class="read-more">Read Full Article →</a>
+    </div>
+
+    <div class="article-card">
+        <h3>Thee GO, e-Stop & KFC: A Pioneering Launch</h3>
+        <p>Inside the strategic partnership creating Nepal’s first eco-friendly highway rest-stop network.</p>
+        <a href="https://www.linkedin.com/pulse/thee-go-e-stop-partners-kfc-launch-nepals-first-eco-friendly-d5wrc/" class="read-more">Read Full Article →</a>
+    </div>
+
+    <div class="category-title">National Economic & Social Dilemmas</div>
+
+    <div class="article-card">
+        <h3>The Disappearing Youth of Nepal</h3>
+        <p>An in-depth look at the national dilemma of youth migration and the economic challenges of job seeking in Nepal.</p>
+        <a href="https://thehimalayantimes.com/opinion/the-disappearing-youth-of-nepal-a-national-dilemma" class="read-more">Read on Himalayan Times →</a>
+    </div>
+
+    <div class="article-card">
+        <h3>Critical Reflections: Nepal’s Fiscal Future</h3>
+        <p>Reflections on pre-budget discussions and the necessary fiscal shifts to stabilize the national economy.</p>
+        <a href="https://www.linkedin.com/pulse/critical-reflections-pre-budget-discussion-nepals-fiscal-hikzc/" class="read-more">Read Full Article →</a>
+    </div>
+
+    <div class="article-card">
+        <h3>Frustration on the Highway</h3>
+        <p>A case study on the road from Dumkibas to Bardaghat and the real-world impact of infrastructure delays.</p>
+        <a href="https://www.linkedin.com/pulse/frustration-highway-construction-delays-road-from-dumkibas-3kmec/" class="read-more">Read Full Article →</a>
+    </div>
+
+</div>
 
 </body>
 </html>
