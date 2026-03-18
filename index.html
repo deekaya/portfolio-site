@@ -26,10 +26,14 @@
             height: 60vh;
             width: 100%;
             background: linear-gradient(rgba(15, 17, 19, 0.2), var(--primary-bg)), 
-                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2070'),
+                        /* New picture added here */
+                        linear-gradient(rgba(15, 17, 19, 0.2), var(--primary-bg)),
+                        url('image_0.png');
+            background-size: cover, cover;
+            background-position: center, left;
+            background-repeat: no-repeat, no-repeat;
+            background-attachment: fixed, fixed;
         }
 
         /* Navigation Menu */
